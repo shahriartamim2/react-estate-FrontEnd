@@ -7,6 +7,8 @@
     max-width: 1366px;
     margin: 0 auto;
     padding: 0 20px;
+    display: flex;
+    flex-direction: column;
 
     @include lg{
         background-color: rgb(197, 255, 255);
@@ -19,6 +21,11 @@
     @include sm{
         background-color: rgb(212, 173, 249);
         max-width: 640px;
+    }
+
+    .content{
+        flex: 1;
+
     }
     
 }

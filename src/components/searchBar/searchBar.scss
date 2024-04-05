@@ -1,11 +1,16 @@
-.searchBar{
+@import "../../responsive.scss";
 
+.searchBar{
+    width: 100%;
     .type{
         button{
             padding: 16px 26px;
             background-color: #fff;
             cursor: pointer;
             text-transform: capitalize;
+            border-bottom: none;
+
+
             &.active{
                 background-color: black;
                 color: white;
@@ -21,4 +26,38 @@
         }
 
     }
+    form{
+        border: 1px solid cadetblue;
+        display: flex;
+        justify-content: space-between;
+        gap: 5px;
+        height: 64px;
+
+        input{
+            border: none;
+            width: 200px;
+            padding: 0 10px;
+
+            @include lg{
+                padding: 0 5px;
+
+                &:nth-child(2),&:nth-child(3){
+                    width: 140px; 
+            }
+            }
+        }
+
+        button{
+            border: none;
+            background-color: yellow;
+            flex:1;
+            cursor: pointer;
+
+            img{
+                width: 24px;
+                height: 24px;
+            }
+        }
+    }
+    
 }

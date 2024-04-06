@@ -1,56 +1,80 @@
 @import "../responsive.scss";
 
+.homePage {
+  display: flex;
+  height: 100%;
+  justify-content: space-between;
+  .textContainer {
+    flex: 3;
 
-.homePage{
-    display: flex;
-    height: 100%;
-    .textContainer{
-        flex: 3;
+    .wrapper {
+      padding-right: 100px;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 50px;
+      justify-content: center;
+      align-items: center;
 
-        .wrapper{
-            padding-right: 100px;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            gap: 50px;
-            justify-content: center;
-            align-items: center;
+      @include sm {
+        justify-content: flex-start;
+      }
 
-            .title{
-                font-size: 64px;
-            }
+      @include md {
+        padding: 0;
+      }
 
-            .boxes{
-                width: 100%;
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
+      .title {
+        font-size: 64px;
 
-                h1{
-                    font-size: 36px;
-                }
-                h2{
-                    font-size: 20px;
-                    font-weight: 300;
-                }
-            }
+        @include lg {
+          font-size: 48px;
         }
-    }
-    .imgContainer{
-        flex: 2;
-        background-color: #fcf5f3;
-        position: relative;
+      }
+
+      .boxes {
+        width: 100%;
         display: flex;
         align-items: center;
+        justify-content: space-between;
 
-        img{
-            width: 115%;
-            position: absolute;
-            right: 0;
+        @include sm {
+          display: none;
         }
 
-        @include md{
-            display: none;
+        h1 {
+          font-size: 36px;
+
+          @include lg {
+            font-size: 30px;
+          }
         }
+        h2 {
+          font-size: 20px;
+          font-weight: 300;
+        }
+      }
     }
+  }
+  .imgContainer {
+    flex: 2;
+    background-color: #fcf5f3;
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    img {
+      width: 115%;
+      position: absolute;
+      right: 0;
+
+      @include lg {
+        width: 105%;
+      }
+    }
+
+    @include md {
+      display: none;
+    }
+  }
 }

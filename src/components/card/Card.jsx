@@ -1,7 +1,7 @@
-import "./card.scss"
-import { Link } from 'react-router-dom'
+import { Link } from "react-router-dom";
+import "./card.scss";
 
-const Card = ({item}) => {
+const Card = ({ item }) => {
   return (
     <div className="card">
       <Link to={`/${item.id}`} className="imgContainer">
@@ -15,6 +15,11 @@ const Card = ({item}) => {
           <img src="/pin.png" alt="" />
           <span>{item.address}</span>
         </p>
+
+        <p className="price">
+          <span>$ {item.price}</span>
+        </p>
+
         <div className="bottom">
           <div className="features">
             <div className="feature">
@@ -38,6 +43,6 @@ const Card = ({item}) => {
       </div>
     </div>
   );
-}
+};
 
-export default Card
+export default Card;

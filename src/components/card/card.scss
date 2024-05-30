@@ -1,19 +1,97 @@
-.card{
+.card {
+  display: flex;
+  gap: 20px;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  padding: 5px;
+  border: 1px solid rgb(208, 208, 208);
+
+  .imgContainer {
+    flex: 2;
+    height: 200px;
+
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+  }
+  .textContainer {
+    flex: 3;
     display: flex;
-    gap: 20px;
+    flex-direction: column;
+    justify-content: space-between;
 
-    .imgContainer{
-        flex: 2;
-        height: 200px;
+    img {
+      height: 16px;
+      width: 16px;
+    }
 
-        img{
-            height: 100%;
-            width: 100%;
-            object-fit: cover;
-            border-radius: 10px;
+    .title {
+      font-size: 20px;
+      font-weight: 600;
+      color: #444;
+
+      &:hover {
+        color: black;
+      }
+    }
+
+    .address {
+      font-size: 14px;
+      color: #444;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .price {
+      font-size: 20px;
+      font-weight: 600;
+      background-color: rgb(248, 186, 111);
+      border-radius: 3px;
+      width: max-content;
+      padding: 2px 5px;
+    }
+
+    .bottom {
+      display: flex;
+      gap: 10px;
+      justify-content: space-between;
+      align-items: center;
+
+      .features {
+        display: flex;
+        gap: 20px;
+
+        .feature {
+          display: flex;
+          align-items: center;
+          gap: 5px;
+          border: 1px solid lightgrey;
+          padding: 5px 8px;
+          background-color: lightgrey;
+          border-radius: 5px;
         }
+      }
+
+      .icons {
+        display: flex;
+        gap: 5px;
+
+        .icon {
+          border: 1px solid grey;
+          border-radius: 5px;
+          padding: 10px 8px;
+          background-color: lightgrey;
+
+          &:hover {
+            background-color: white;
+            box-shadow: 2px 2px 3px;
+          }
+        }
+      }
     }
-    .textContainer{
-        flex: 3;
-    }
+  }
 }

@@ -1,4 +1,4 @@
-
+import { Link } from "react-router-dom";
 import { useState } from "react";
 import "./navbar.scss"
 
@@ -7,10 +7,10 @@ const Navbar = () => {
   return (
     <nav>
       <div className="left">
-        <a href="" className="logo">
+        <Link to="/" className="logo">
           <img src="/logo.png" alt="lama estate" />
           <span>LamaEstate</span>
-        </a>
+        </Link>
         <a href="/">Home</a>
         <a href="/">About</a>
         <a href="/">Contacts</a>
